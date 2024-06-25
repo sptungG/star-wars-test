@@ -2,16 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
+First, copy **.env.example** and paste in **.env.local**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+NEXT_PUBLIC_API_ENDPOINT="https://swapi.dev/api"
+NEXT_PUBLIC_IMG_URL="https://starwars-visualguide.com/assets/img"
+```
+
+then install packages used in project with **pnpm**
+```bash
+pnpm i
+```
+
+run the development server
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
