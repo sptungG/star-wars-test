@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/assets/img/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
+        port: '',
+        pathname: '/api/**',
+      },
     ],
   },
 };
