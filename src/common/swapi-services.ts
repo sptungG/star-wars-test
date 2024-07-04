@@ -1,4 +1,4 @@
-import { TCharacterPages, TSpecie, TPlanet, TVehicle, TCharacterDetail } from './types';
+import { TCharacterPages, TSpecies, TPlanet, TVehicle, TCharacter } from './types';
 
 const baseUrl = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
 
@@ -16,7 +16,7 @@ export const getAllCharactersPages = async () => {
 };
 
 export const getAllSpecies = async () => {
-  let species: TSpecie[] = [];
+  let species: TSpecies[] = [];
   let nextUrl = `${baseUrl}/species/?page=1`;
 
   while (nextUrl) {
@@ -41,7 +41,7 @@ export const getAllPlanets = async () => {
   return planets;
 };
 
-export const getCharacterById = async (id: string): Promise<TCharacterDetail> => {
+export const getCharacterById = async (id: string): Promise<TCharacter> => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/people/${id}`);
   return res.json();
 };
