@@ -28,7 +28,7 @@ export default async function Page() {
             ...item,
             id: characterID,
             skin_colors: foundSpecies?.skin_colors,
-            homeworldName: foundPlanet?.name,
+            homeworld_name: foundPlanet?.name,
           };
         })}
       />

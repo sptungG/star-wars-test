@@ -6,7 +6,7 @@ import { createBackgroundString } from '@/common/utils';
 
 export type TMappedCharacter = TCharacter & {
   id: string | undefined;
-  homeworldName: string | undefined;
+  homeworld_name: string | undefined;
   skin_colors: string | undefined;
 };
 type TCardCharacterProps = { data: TMappedCharacter };
@@ -29,7 +29,7 @@ const CardCharacter = ({ data }: TCardCharacterProps) => {
           </div>
           <div className="flex items-center text-slate-300 group-hover/character:text-amber-200">
             <EarthIcon className="h-4" />
-            <span>{data.homeworldName}</span>
+            <span>{data.homeworld_name}</span>
           </div>
         </div>
       </div>
