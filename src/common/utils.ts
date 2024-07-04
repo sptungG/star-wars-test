@@ -6,14 +6,16 @@ export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 export const getTotalPage = (total: number, limit: number) => {
   let totalPage =
-    total % limit === 0 ? (total - (total % limit)) / limit : (total - (total % limit)) / limit + 1;
+    total % limit === 0
+      ? (total - (total % limit)) / limit
+      : (total - (total % limit)) / limit + 1;
   totalPage = Number.isNaN(Number(totalPage)) ? 0 : Number(totalPage);
   return totalPage === 0 ? 1 : totalPage;
 };
 
 export const extractIdFromUrl = (url: string) => {
   const matches = url.match(/\/(\d+)\/$/);
-  return matches ? matches[1] : undefined;
+  return matches ? matches[1] : '';
 };
 
 export const getItemID = (url: string) => {

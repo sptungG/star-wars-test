@@ -49,12 +49,18 @@ const ListCharacters = ({
       items.filter((item) => {
         const mappedSpeciesId = item.species.map((s) => extractIdFromUrl(s));
         const homeworldId = extractIdFromUrl(item.homeworld);
+
+        const matchName = item.name.toLowerCase().includes(searchValue);
+
+        const matchedPlanet =
+          selectedPlanetValue === '' || homeworldId === selectedPlanetValue;
+
+        const matchSpecies =
+          selectedSpeciesValue === '' ||
+          mappedSpeciesId?.includes(selectedSpeciesValue);
+
         // item matched 3 conditions
-        return (
-          homeworldId === selectedPlanetValue &&
-          mappedSpeciesId.join(',')?.includes(selectedSpeciesValue) &&
-          item.name.toLowerCase().includes(searchValue)
-        );
+        return matchedPlanet && matchSpecies && matchName;
       }),
     [items, searchValue, selectedSpeciesValue, selectedPlanetValue]
   );
