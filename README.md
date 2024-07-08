@@ -22,6 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
+[https://tribegroup.notion.site/Front-End-Developer-Take-Home-Test-33224b9e3b5b488fab5ec670643ddf1a](https://tribegroup.notion.site/Front-End-Developer-Take-Home-Test-33224b9e3b5b488fab5ec670643ddf1a)
+
 # Front End Developer Take-Home Test
 
 # Brief
